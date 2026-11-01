@@ -1,7 +1,7 @@
 # PICO_Face!!!
 My project takes 4 MAX7219 Serial Dot Matrix Display Modules daisy chained together. In other words my project is 4 LED matrix 8x8 joined together in a square. This formation will become the head of my future robot! Right now I'm coding in a sequence and some reactions to data like light and temperature. As I build the brains of my robot in another repository (in the future) I hope to make it easier for the robot to react to the environment around them. 
 here's an AWESOME cad look of my project!
-![awesome picture]([https://user-cdn.hackclub-assets.com/019f0195-7b3c-7a6b-a8c9-ba589c575ae6/blahajmeow.gif](https://github.com/manula5454/PICO-Face/blob/540d21be290d7b2ce7e66495d8b30e280f9589e1/Images/CAD.png))
+![awesome picture](https://github.com/manula5454/PICO-Face/blob/540d21be290d7b2ce7e66495d8b30e280f9589e1/Images/CAD.png)
 
 * MAX7219
 * LED MATRIX
