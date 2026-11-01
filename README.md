@@ -9,7 +9,7 @@ here's an AWESOME cad look of my project!
 * Arduino NAN)
 
 ## HOW THIS WAS MADE
-1. I used canva to play around with the matrix looks (see ![Matrix Images](https://github.com/manula5454/PICO-Face/blob/697f6334a7c6b1ae7bfd4085c8c991629a414b7b/LEDMATRIX.png) )
+1. I used Canva to play around with the matrix looks like ![Matrix Images](https://github.com/manula5454/PICO-Face/blob/697f6334a7c6b1ae7bfd4085c8c991629a414b7b/LEDMATRIX.png)
 2.  Using Canva I wrote the basic bytes for my Arduino code
 3.  I created functions for each expresion I'll be using for my sequence
 4.  I added two data inputs in a LDR (Photoresistor) and a DHT11 for temp and humidity settings.
