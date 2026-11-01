@@ -25,6 +25,7 @@ here's an AWESOME cad look of my project!
 2. Download and copy Arduino Code in [Arduino.ino](https://github.com/manula5454/PICO-Face/blob/697f6334a7c6b1ae7bfd4085c8c991629a414b7b/Arduino/Arduino.ino)
 
 3. Wire up Arduino NANO, LDR, DHT11, 4x MAX7219 Dot Matrix Display Module
+   See [Bom.csv](https://github.com/manula5454/PICO-Face/blob/0827cc059c5ca240e41ab39d81e873501b5fe155/BOM.csv) for parts
   See the [schematic](https://github.com/manula5454/PICO-Face/tree/697f6334a7c6b1ae7bfd4085c8c991629a414b7b/Schematic_PICO)
   ![Schmatic_Image](https://github.com/manula5454/PICO-Face/blob/697f6334a7c6b1ae7bfd4085c8c991629a414b7b/Images/Schematic_PICO.png)
 
