@@ -36,7 +36,16 @@ byte eyeBlink[8] = {
   0b00000000,
   0b00000000
 };
-
+byte eyeLove[8] = {
+  0b01100110,
+  0b00011000,
+  0b11111111,
+  0b11111111,
+  0b01111110,
+  0b00111100,
+  0b00011000,
+  0b00000000
+};
 byte eyeLefttriangle[8]{
   0b00000000,
   0b00110000,
@@ -78,6 +87,26 @@ byte mouthRight[8] = {
   0b11110000,
   0b11110000,
   0b11100000
+};
+
+byte mouthLeftsad[8]{
+  0b00000000,
+  0b00000111,
+  0b00001111,
+  0b11100000,
+  0b00111100,
+  0b00111000
+};
+
+byte mouthRightsad[8]{
+  0b00000000,
+  0b11100000,
+  0b11110000,
+  0b11111000,
+  0b00111100,
+  0b00011100,
+  0b0000000,
+  0b0000000
 };
 
 byte mouthLeftshock[8] = {
@@ -167,10 +196,9 @@ void wink(int wink, int open){
   }
 }
 void sadFace(){
-  drawEyes(eyeBlink);
   for (int h= 0; h<8; h++){
-    lc.setRow (2, h, mouthLeft[h]);
-    lc.setRow(3, h, mouthRight[h]); // need to flip
+    lc.setRow (2, h, mouthLeftsad[h]);
+    lc.setRow(3, h, mouthRightsad[h]);
   }
 }
 void angryFace(){
@@ -178,6 +206,17 @@ void angryFace(){
     lc.setRow(0, j, eyeLefttriangle[j]);
     lc.setRow(1, j, eyeRighttriangle[j]);
   }
+  drawMouth();
+}
+void evilFace(){
+  for(int k = 0; k<8; k++){
+    lc.setRow(0, k, eyeLefttriangle[k]);
+    lc.setRow(1, k, eyeRighttriangle[k]);
+  }
+  sadFace();
+}
+void loveFace(){
+  drawEyes(eyeLove);
   drawMouth();
 }
 void setup(){
@@ -219,7 +258,8 @@ void loop(){
 
   if (digitalRead(buttonPin) == HIGH) {
     buttonCount++;
-    if(buttonCount > 4){
+    drawShock();
+    if(buttonCount > 6){
       buttonCount = 0;
     }
   }
@@ -241,8 +281,20 @@ void loop(){
     t = dht.readTemperature();
     h = dht.readHumidity();
 
+    // some code about data here
 
-
+  }
+  if (buttonCount == 2){
+    sadFace();
+  }
+  if (buttonCount == 3){
+    evilFace();
+  }
+  if (buttonCount == 4){
+    angryFace();
+  }
+  if (buttonCount == 5){
+    loveFace();
   }
     
   }
